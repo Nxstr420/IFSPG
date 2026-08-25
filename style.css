@@ -1,0 +1,982 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #090909;
+    --bg-light: #111111;
+    --card: #151515;
+    --card-light: #1c1c1c;
+    --white: #ffffff;
+    --gray: #969696;
+    --red: #e21d2b;
+    --red-dark: #a90e19;
+    --border: #292929;
+    --yellow: #ffb800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 80px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(9, 9, 9, 0.94);
+    border-bottom: 1px solid var(--border);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--red);
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    font-size: 13px;
+    font-weight: 700;
+    color: #bbb;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--red);
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 25px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    padding: 150px 8% 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(9, 9, 9, 0.98) 0%,
+            rgba(9, 9, 9, 0.78) 50%,
+            rgba(9, 9, 9, 0.94) 100%
+        ),
+        repeating-linear-gradient(
+            135deg,
+            #101010 0px,
+            #101010 2px,
+            #0d0d0d 2px,
+            #0d0d0d 8px
+        );
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: var(--red);
+    filter: blur(180px);
+    opacity: 0.1;
+    right: -150px;
+    top: 20%;
+}
+
+.hero-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 2;
+}
+
+.tag {
+    color: var(--red);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(70px, 10vw, 150px);
+    line-height: 0.82;
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin-top: 35px;
+    color: #aaa;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 28px;
+    border: none;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    background: var(--red);
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #ff2636;
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    border: 1px solid #555;
+    background: transparent;
+    color: white;
+}
+
+.btn.secondary:hover {
+    border-color: white;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 80px;
+    margin-top: 90px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-stats strong {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 40px;
+}
+
+.hero-stats span {
+    color: #777;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section {
+    padding: 100px 8%;
+}
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: var(--red);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 0.9;
+}
+
+.section-title h2 span {
+    color: var(--red);
+}
+
+
+/* =========================
+   LIFTS
+========================= */
+
+.lifts-section {
+    background: #0d0d0d;
+}
+
+.lift-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.lift-card {
+    min-height: 430px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: flex-end;
+    transition: 0.4s;
+}
+
+.lift-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--red);
+}
+
+.lift-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent 20%,
+        rgba(0, 0, 0, 0.95) 100%
+    );
+}
+
+.lift-number {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: #333;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.lift-content {
+    position: relative;
+    z-index: 2;
+}
+
+.lift-content > p:first-child {
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.lift-content h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 48px;
+    margin: 8px 0 15px;
+}
+
+.lift-content p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.lift-btn {
+    margin-top: 25px;
+    padding: 12px 0;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.lift-btn:hover {
+    color: var(--red);
+}
+
+.squat {
+    background:
+        linear-gradient(transparent, #111),
+        radial-gradient(circle at 70% 20%, #442020, #151515 55%);
+}
+
+.bench {
+    background:
+        linear-gradient(transparent, #111),
+        radial-gradient(circle at 70% 20%, #202c44, #151515 55%);
+}
+
+.deadlift {
+    background:
+        linear-gradient(transparent, #111),
+        radial-gradient(circle at 70% 20%, #40351d, #151515 55%);
+}
+
+
+/* =========================
+   TRAINING
+========================= */
+
+.training-section {
+    background: var(--bg);
+}
+
+.training-layout {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 30px;
+}
+
+.week-days {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.day {
+    background: #111;
+    color: #777;
+    border: 1px solid var(--border);
+    padding: 17px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.day span {
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.day strong {
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 27px;
+    margin-top: 3px;
+}
+
+.day:hover,
+.day.active {
+    background: var(--red);
+    border-color: var(--red);
+    color: white;
+}
+
+.workout-container {
+    background: var(--card);
+    border: 1px solid var(--border);
+}
+
+.workout-header {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+}
+
+.workout-header p {
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.workout-header h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+.workout-time {
+    color: #888;
+    font-size: 12px;
+}
+
+.exercise {
+    padding: 23px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+}
+
+.exercise:last-child {
+    border-bottom: none;
+}
+
+.exercise-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.exercise-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    background: #242424;
+    color: var(--red);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.exercise h4 {
+    font-size: 14px;
+}
+
+.exercise p {
+    color: #777;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.exercise-data {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.exercise-data strong {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 23px;
+}
+
+.exercise-data span {
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.complete-btn {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #444;
+    background: transparent;
+    color: #555;
+    transition: 0.3s;
+}
+
+.complete-btn:hover,
+.complete-btn.completed {
+    color: white;
+    background: var(--red);
+    border-color: var(--red);
+}
+
+
+/* =========================
+   CALCULATOR
+========================= */
+
+.calculator-section {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 100px;
+    background:
+        linear-gradient(90deg, #111, #0b0b0b);
+    align-items: center;
+}
+
+.calculator-info > p:first-child {
+    color: var(--red);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.calculator-info h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 75px;
+    line-height: 0.9;
+}
+
+.calculator-info h2 span {
+    color: var(--red);
+}
+
+.calculator-info > p {
+    color: #999;
+    max-width: 500px;
+    margin-top: 25px;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.formula {
+    margin-top: 30px;
+    padding: 20px;
+    border-left: 3px solid var(--red);
+    background: #171717;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formula strong {
+    font-size: 10px;
+    color: var(--red);
+}
+
+.formula span {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+}
+
+.calculator {
+    padding: 35px;
+    background: var(--card);
+    border: 1px solid var(--border);
+}
+
+.calculator label {
+    display: block;
+    color: #999;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.calculator input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    background: #0d0d0d;
+    color: white;
+    outline: none;
+    font-size: 16px;
+}
+
+.calculator input:focus {
+    border-color: var(--red);
+}
+
+.full {
+    width: 100%;
+}
+
+.result {
+    margin-top: 25px;
+    padding: 25px;
+    text-align: center;
+    background: #101010;
+}
+
+.result p {
+    color: #777;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.result strong {
+    display: block;
+    margin-top: 8px;
+    color: var(--red);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 50px;
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-section {
+    background: #0d0d0d;
+}
+
+.progress-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.progress-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 25px;
+}
+
+.progress-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.progress-card-header p {
+    color: #777;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.progress-card-header h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+.positive {
+    color: #36d27c;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.chart {
+    height: 180px;
+    margin-top: 35px;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    border-bottom: 1px solid #333;
+}
+
+.chart div {
+    flex: 1;
+    background: var(--red);
+    min-height: 10px;
+    transition: 0.5s;
+}
+
+.chart div:hover {
+    background: #ff4350;
+}
+
+.chart.red div {
+    background: #8d2730;
+}
+
+.chart.yellow div {
+    background: var(--yellow);
+}
+
+.chart-label {
+    color: #555;
+    font-size: 9px;
+    margin-top: 12px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    padding: 140px 8%;
+    text-align: center;
+    background:
+        radial-gradient(
+            circle,
+            #321014 0%,
+            #0a0a0a 55%
+        );
+}
+
+.cta > p {
+    color: var(--red);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.cta h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(60px, 9vw, 130px);
+    line-height: 0.85;
+    margin: 20px 0 35px;
+}
+
+.cta h2 span {
+    color: var(--red);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 45px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--border);
+    color: #777;
+}
+
+footer p {
+    font-size: 11px;
+}
+
+.copyright {
+    color: #444;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    place-items: center;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 2000;
+    padding: 20px;
+}
+
+.modal.show {
+    display: grid;
+}
+
+.modal-content {
+    width: min(500px, 100%);
+    padding: 40px;
+    background: #151515;
+    border: 1px solid #333;
+    position: relative;
+}
+
+.modal-content > p {
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.modal-content h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 55px;
+    margin: 5px 0 20px;
+}
+
+.modal-content p {
+    color: #999;
+    line-height: 1.6;
+}
+
+.modal-content ul {
+    margin-top: 20px;
+    padding-left: 20px;
+    color: #ccc;
+    line-height: 2;
+    font-size: 13px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    border: none;
+    background: transparent;
+    color: #aaa;
+    font-size: 30px;
+}
+
+.close-modal:hover {
+    color: white;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar nav {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #111;
+        padding: 25px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar nav.open {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .lift-grid,
+    .progress-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .calculator-section {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .training-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .week-days {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .day {
+        min-width: 90px;
+    }
+
+    .hero-stats {
+        gap: 35px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 70px 5%;
+    }
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .hero {
+        padding: 130px 5% 60px;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+    }
+
+    .hero h1 span {
+        -webkit-text-stroke: 1px white;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-stats {
+        margin-top: 60px;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .hero-stats strong {
+        font-size: 30px;
+    }
+
+    .lift-card {
+        min-height: 350px;
+    }
+
+    .workout-header {
+        padding: 20px;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .workout-header h3 {
+        font-size: 30px;
+    }
+
+    .exercise {
+        padding: 18px;
+        gap: 10px;
+    }
+
+    .exercise-data {
+        gap: 10px;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .calculator-info h2 {
+        font-size: 60px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#111111">
+    <meta name="description" content="Plataforma de entrenamiento enfocada en powerlifting">
+
+    <title>IRON FORCE | Powerlifting</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <span>IRON</span> FORCE
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#entrenamiento">Entrenamiento</a>
+            <a href="#calculadora">1RM</a>
+            <a href="#progreso">Progreso</a>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+    </header>
+
+    <!-- HERO -->
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-content">
+                <p class="tag">POWERLIFTING • STRENGTH • DISCIPLINE</p>
+
+                <h1>
+                    ENTRENA<br>
+                    <span>COMO UN CAMPEÓN.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Mejora tu fuerza en sentadilla, press banca y peso muerto
+                    con entrenamientos estructurados y seguimiento de progreso.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#entrenamiento" class="btn primary">
+                        Comenzar entrenamiento
+                    </a>
+
+                    <a href="#calculadora" class="btn secondary">
+                        Calcular 1RM
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-stats">
+                <div>
+                    <strong>3</strong>
+                    <span>LEVANTAMIENTOS</span>
+                </div>
+
+                <div>
+                    <strong>5</strong>
+                    <span>DÍAS / SEMANA</span>
+                </div>
+
+                <div>
+                    <strong>100%</strong>
+                    <span>DISCIPLINA</span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- LEVANTAMIENTOS -->
+        <section class="lifts-section">
+
+            <div class="section-title">
+                <p>LOS TRES GRANDES</p>
+                <h2>DOMINA LOS <span>LEVANTAMIENTOS</span></h2>
+            </div>
+
+            <div class="lift-grid">
+
+                <article class="lift-card squat">
+                    <div class="lift-number">01</div>
+
+                    <div class="lift-content">
+                        <p>LOWER BODY</p>
+                        <h3>SENTADILLA</h3>
+
+                        <p>
+                            Construye piernas fuertes y desarrolla potencia
+                            desde el suelo.
+                        </p>
+
+                        <button
+                            class="lift-btn"
+                            data-exercise="Sentadilla">
+                            VER ENTRENAMIENTO →
+                        </button>
+                    </div>
+                </article>
+
+                <article class="lift-card bench">
+                    <div class="lift-number">02</div>
+
+                    <div class="lift-content">
+                        <p>UPPER BODY</p>
+                        <h3>PRESS BANCA</h3>
+
+                        <p>
+                            Aumenta la fuerza de tu pecho, hombros y tríceps.
+                        </p>
+
+                        <button
+                            class="lift-btn"
+                            data-exercise="Press banca">
+                            VER ENTRENAMIENTO →
+                        </button>
+                    </div>
+                </article>
+
+                <article class="lift-card deadlift">
+                    <div class="lift-number">03</div>
+
+                    <div class="lift-content">
+                        <p>FULL BODY</p>
+                        <h3>PESO MUERTO</h3>
+
+                        <p>
+                            Desarrolla una cadena posterior poderosa y una
+                            fuerza brutal.
+                        </p>
+
+                        <button
+                            class="lift-btn"
+                            data-exercise="Peso muerto">
+                            VER ENTRENAMIENTO →
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- ENTRENAMIENTO -->
+        <section class="training-section" id="entrenamiento">
+
+            <div class="section-title">
+                <p>PROGRAMA SEMANAL</p>
+                <h2>TU <span>ENTRENAMIENTO</span></h2>
+            </div>
+
+            <div class="training-layout">
+
+                <div class="week-days">
+
+                    <button class="day active" data-day="lunes">
+                        <span>LUN</span>
+                        <strong>01</strong>
+                    </button>
+
+                    <button class="day" data-day="martes">
+                        <span>MAR</span>
+                        <strong>02</strong>
+                    </button>
+
+                    <button class="day" data-day="miercoles">
+                        <span>MIÉ</span>
+                        <strong>03</strong>
+                    </button>
+
+                    <button class="day" data-day="jueves">
+                        <span>JUE</span>
+                        <strong>04</strong>
+                    </button>
+
+                    <button class="day" data-day="viernes">
+                        <span>VIE</span>
+                        <strong>05</strong>
+                    </button>
+
+                </div>
+
+
+                <div class="workout-container">
+
+                    <div class="workout-header">
+                        <div>
+                            <p id="workoutDay">LUNES • FUERZA</p>
+                            <h3 id="workoutTitle">
+                                SENTADILLA PESADA
+                            </h3>
+                        </div>
+
+                        <div class="workout-time">
+                            ⏱ <span id="workoutTime">75</span> MIN
+                        </div>
+                    </div>
+
+
+                    <div class="exercise-list" id="exerciseList">
+
+                        <div class="exercise">
+                            <div class="exercise-info">
+                                <span class="exercise-icon">S</span>
+
+                                <div>
+                                    <h4>Sentadilla trasera</h4>
+                                    <p>Principal • Fuerza</p>
+                                </div>
+                            </div>
+
+                            <div class="exercise-data">
+                                <strong>5 × 5</strong>
+                                <span>80%</span>
+                            </div>
+
+                            <button class="complete-btn">
+                                ✓
+                            </button>
+                        </div>
+
+
+                        <div class="exercise">
+                            <div class="exercise-info">
+                                <span class="exercise-icon">L</span>
+
+                                <div>
+                                    <h4>Peso muerto rumano</h4>
+                                    <p>Accesorio</p>
+                                </div>
+                            </div>
+
+                            <div class="exercise-data">
+                                <strong>4 × 8</strong>
+                                <span>65%</span>
+                            </div>
+
+                            <button class="complete-btn">
+                                ✓
+                            </button>
+                        </div>
+
+
+                        <div class="exercise">
+                            <div class="exercise-info">
+                                <span class="exercise-icon">P</span>
+
+                                <div>
+                                    <h4>Prensa de piernas</h4>
+                                    <p>Hipertrofia</p>
+                                </div>
+                            </div>
+
+                            <div class="exercise-data">
+                                <strong>3 × 12</strong>
+                                <span>RPE 8</span>
+                            </div>
+
+                            <button class="complete-btn">
+                                ✓
+                            </button>
+                        </div>
+
+
+                        <div class="exercise">
+                            <div class="exercise-info">
+                                <span class="exercise-icon">C</span>
+
+                                <div>
+                                    <h4>Core / Abdominales</h4>
+                                    <p>Accesorio</p>
+                                </div>
+                            </div>
+
+                            <div class="exercise-data">
+                                <strong>3 × 15</strong>
+                                <span>RPE 7</span>
+                            </div>
+
+                            <button class="complete-btn">
+                                ✓
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CALCULADORA -->
+        <section class="calculator-section" id="calculadora">
+
+            <div class="calculator-info">
+                <p>CALCULADORA DE FUERZA</p>
+
+                <h2>
+                    CALCULA TU
+                    <span>1RM</span>
+                </h2>
+
+                <p>
+                    Introduce el peso utilizado y las repeticiones realizadas
+                    para estimar tu repetición máxima.
+                </p>
+
+                <div class="formula">
+                    <strong>FÓRMULA DE EPLEY</strong>
+                    <span>1RM = Peso × (1 + Reps / 30)</span>
+                </div>
+            </div>
+
+
+            <div class="calculator">
+
+                <label for="weight">
+                    PESO UTILIZADO (KG)
+                </label>
+
+                <input
+                    type="number"
+                    id="weight"
+                    placeholder="Ej. 120"
+                    min="1"
+                >
+
+                <label for="reps">
+                    REPETICIONES
+                </label>
+
+                <input
+                    type="number"
+                    id="reps"
+                    placeholder="Ej. 5"
+                    min="1"
+                    max="30"
+                >
+
+                <button class="btn primary full" id="calculateBtn">
+                    CALCULAR 1RM
+                </button>
+
+                <div class="result">
+                    <p>1RM ESTIMADO</p>
+                    <strong id="oneRM">-- KG</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROGRESO -->
+        <section class="progress-section" id="progreso">
+
+            <div class="section-title">
+                <p>TRACKING</p>
+                <h2>MONITOREA TU <span>PROGRESO</span></h2>
+            </div>
+
+            <div class="progress-grid">
+
+                <div class="progress-card">
+                    <div class="progress-card-header">
+                        <div>
+                            <p>SENTADILLA</p>
+                            <h3 id="squatWeight">180 KG</h3>
+                        </div>
+
+                        <span class="positive">+12%</span>
+                    </div>
+
+                    <div class="chart">
+                        <div style="height: 30%"></div>
+                        <div style="height: 42%"></div>
+                        <div style="height: 48%"></div>
+                        <div style="height: 60%"></div>
+                        <div style="height: 65%"></div>
+                        <div style="height: 78%"></div>
+                        <div style="height: 90%"></div>
+                    </div>
+
+                    <p class="chart-label">
+                        ÚLTIMAS 7 SEMANAS
+                    </p>
+                </div>
+
+
+                <div class="progress-card">
+                    <div class="progress-card-header">
+                        <div>
+                            <p>PRESS BANCA</p>
+                            <h3>125 KG</h3>
+                        </div>
+
+                        <span class="positive">+8%</span>
+                    </div>
+
+                    <div class="chart red">
+                        <div style="height: 35%"></div>
+                        <div style="height: 40%"></div>
+                        <div style="height: 46%"></div>
+                        <div style="height: 55%"></div>
+                        <div style="height: 58%"></div>
+                        <div style="height: 72%"></div>
+                        <div style="height: 82%"></div>
+                    </div>
+
+                    <p class="chart-label">
+                        ÚLTIMAS 7 SEMANAS
+                    </p>
+                </div>
+
+
+                <div class="progress-card">
+                    <div class="progress-card-header">
+                        <div>
+                            <p>PESO MUERTO</p>
+                            <h3>220 KG</h3>
+                        </div>
+
+                        <span class="positive">+15%</span>
+                    </div>
+
+                    <div class="chart yellow">
+                        <div style="height: 25%"></div>
+                        <div style="height: 38%"></div>
+                        <div style="height: 44%"></div>
+                        <div style="height: 55%"></div>
+                        <div style="height: 62%"></div>
+                        <div style="height: 75%"></div>
+                        <div style="height: 95%"></div>
+                    </div>
+
+                    <p class="chart-label">
+                        ÚLTIMAS 7 SEMANAS
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+        <section class="cta">
+
+            <p>NO HAY EXCUSAS</p>
+
+            <h2>
+                MÁS FUERTE QUE
+                <span>AYER.</span>
+            </h2>
+
+            <button class="btn primary" id="startBtn">
+                INICIAR SESIÓN
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="logo">
+            <span>IRON</span> FORCE
+        </div>
+
+        <p>
+            Entrena duro. Entrena inteligente.
+        </p>
+
+        <p class="copyright">
+            © 2026 IRON FORCE
+        </p>
+
+    </footer>
+
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+
+        <div class="modal-content">
+
+            <button class="close-modal" id="closeModal">
+                ×
+            </button>
+
+            <p>ENTRENAMIENTO</p>
+
+            <h2 id="modalTitle">
+                SENTADILLA
+            </h2>
+
+            <div id="modalBody">
+                <p>
+                    Preparación específica para mejorar tu fuerza.
+                </p>
+
+                <ul>
+                    <li>Calentamiento: 10 minutos</li>
+                    <li>Series principales: 5 × 5</li>
+                    <li>RPE objetivo: 7-8</li>
+                    <li>Descanso: 3-5 minutos</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
