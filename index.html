@@ -1,533 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Entrenamiento de fuerza, powerlifting y nutrición con Néstor Riveros, Campeón Nacional WRPF." />
+    <meta property="og:title" content="Néstor Riveros | Fuerza al siguiente nivel" />
+    <meta property="og:description" content="Entrena con un campeón nacional y construye tu máximo potencial." />
+    <meta property="og:type" content="website" />
+    <title>Néstor Riveros | Powerlifting &amp; Performance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Néstor Riveros","description":"Entrenamiento de fuerza, powerlifting y nutrición.","areaServed":"Colombia","sameAs":[]}</script>
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <header class="nav"><a class="brand" href="#inicio">NR<span>.</span></a><button class="menu-button" aria-label="Abrir menú" aria-expanded="false">Menú</button><nav><a href="#metodo">Método</a><a href="#servicios">Servicios</a><a href="#resultados">Resultados</a><a href="#nestor">Néstor</a></nav><a class="nav-cta" href="#contacto">Aplicar ahora <span>↗</span></a></header>
 
-    <meta name="theme-color" content="#111111">
-    <meta name="description" content="Plataforma de entrenamiento enfocada en powerlifting">
-
-    <title>IRON FORCE | Powerlifting</title>
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
-</head>
-
-<body>
-
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="logo">
-            <span>IRON</span> FORCE
-        </div>
-
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#entrenamiento">Entrenamiento</a>
-            <a href="#calculadora">1RM</a>
-            <a href="#progreso">Progreso</a>
-        </nav>
-
-        <button class="menu-btn" id="menuBtn">☰</button>
-    </header>
-
-    <!-- HERO -->
     <main>
-
-        <section class="hero" id="inicio">
-
-            <div class="hero-content">
-                <p class="tag">POWERLIFTING • STRENGTH • DISCIPLINE</p>
-
-                <h1>
-                    ENTRENA<br>
-                    <span>COMO UN CAMPEÓN.</span>
-                </h1>
-
-                <p class="hero-text">
-                    Mejora tu fuerza en sentadilla, press banca y peso muerto
-                    con entrenamientos estructurados y seguimiento de progreso.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="#entrenamiento" class="btn primary">
-                        Comenzar entrenamiento
-                    </a>
-
-                    <a href="#calculadora" class="btn secondary">
-                        Calcular 1RM
-                    </a>
-                </div>
-            </div>
-
-            <div class="hero-stats">
-                <div>
-                    <strong>3</strong>
-                    <span>LEVANTAMIENTOS</span>
-                </div>
-
-                <div>
-                    <strong>5</strong>
-                    <span>DÍAS / SEMANA</span>
-                </div>
-
-                <div>
-                    <strong>100%</strong>
-                    <span>DISCIPLINA</span>
-                </div>
-            </div>
-
-        </section>
-
-
-        <!-- LEVANTAMIENTOS -->
-        <section class="lifts-section">
-
-            <div class="section-title">
-                <p>LOS TRES GRANDES</p>
-                <h2>DOMINA LOS <span>LEVANTAMIENTOS</span></h2>
-            </div>
-
-            <div class="lift-grid">
-
-                <article class="lift-card squat">
-                    <div class="lift-number">01</div>
-
-                    <div class="lift-content">
-                        <p>LOWER BODY</p>
-                        <h3>SENTADILLA</h3>
-
-                        <p>
-                            Construye piernas fuertes y desarrolla potencia
-                            desde el suelo.
-                        </p>
-
-                        <button
-                            class="lift-btn"
-                            data-exercise="Sentadilla">
-                            VER ENTRENAMIENTO →
-                        </button>
-                    </div>
-                </article>
-
-                <article class="lift-card bench">
-                    <div class="lift-number">02</div>
-
-                    <div class="lift-content">
-                        <p>UPPER BODY</p>
-                        <h3>PRESS BANCA</h3>
-
-                        <p>
-                            Aumenta la fuerza de tu pecho, hombros y tríceps.
-                        </p>
-
-                        <button
-                            class="lift-btn"
-                            data-exercise="Press banca">
-                            VER ENTRENAMIENTO →
-                        </button>
-                    </div>
-                </article>
-
-                <article class="lift-card deadlift">
-                    <div class="lift-number">03</div>
-
-                    <div class="lift-content">
-                        <p>FULL BODY</p>
-                        <h3>PESO MUERTO</h3>
-
-                        <p>
-                            Desarrolla una cadena posterior poderosa y una
-                            fuerza brutal.
-                        </p>
-
-                        <button
-                            class="lift-btn"
-                            data-exercise="Peso muerto">
-                            VER ENTRENAMIENTO →
-                        </button>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-
-        <!-- ENTRENAMIENTO -->
-        <section class="training-section" id="entrenamiento">
-
-            <div class="section-title">
-                <p>PROGRAMA SEMANAL</p>
-                <h2>TU <span>ENTRENAMIENTO</span></h2>
-            </div>
-
-            <div class="training-layout">
-
-                <div class="week-days">
-
-                    <button class="day active" data-day="lunes">
-                        <span>LUN</span>
-                        <strong>01</strong>
-                    </button>
-
-                    <button class="day" data-day="martes">
-                        <span>MAR</span>
-                        <strong>02</strong>
-                    </button>
-
-                    <button class="day" data-day="miercoles">
-                        <span>MIÉ</span>
-                        <strong>03</strong>
-                    </button>
-
-                    <button class="day" data-day="jueves">
-                        <span>JUE</span>
-                        <strong>04</strong>
-                    </button>
-
-                    <button class="day" data-day="viernes">
-                        <span>VIE</span>
-                        <strong>05</strong>
-                    </button>
-
-                </div>
-
-
-                <div class="workout-container">
-
-                    <div class="workout-header">
-                        <div>
-                            <p id="workoutDay">LUNES • FUERZA</p>
-                            <h3 id="workoutTitle">
-                                SENTADILLA PESADA
-                            </h3>
-                        </div>
-
-                        <div class="workout-time">
-                            ⏱ <span id="workoutTime">75</span> MIN
-                        </div>
-                    </div>
-
-
-                    <div class="exercise-list" id="exerciseList">
-
-                        <div class="exercise">
-                            <div class="exercise-info">
-                                <span class="exercise-icon">S</span>
-
-                                <div>
-                                    <h4>Sentadilla trasera</h4>
-                                    <p>Principal • Fuerza</p>
-                                </div>
-                            </div>
-
-                            <div class="exercise-data">
-                                <strong>5 × 5</strong>
-                                <span>80%</span>
-                            </div>
-
-                            <button class="complete-btn">
-                                ✓
-                            </button>
-                        </div>
-
-
-                        <div class="exercise">
-                            <div class="exercise-info">
-                                <span class="exercise-icon">L</span>
-
-                                <div>
-                                    <h4>Peso muerto rumano</h4>
-                                    <p>Accesorio</p>
-                                </div>
-                            </div>
-
-                            <div class="exercise-data">
-                                <strong>4 × 8</strong>
-                                <span>65%</span>
-                            </div>
-
-                            <button class="complete-btn">
-                                ✓
-                            </button>
-                        </div>
-
-
-                        <div class="exercise">
-                            <div class="exercise-info">
-                                <span class="exercise-icon">P</span>
-
-                                <div>
-                                    <h4>Prensa de piernas</h4>
-                                    <p>Hipertrofia</p>
-                                </div>
-                            </div>
-
-                            <div class="exercise-data">
-                                <strong>3 × 12</strong>
-                                <span>RPE 8</span>
-                            </div>
-
-                            <button class="complete-btn">
-                                ✓
-                            </button>
-                        </div>
-
-
-                        <div class="exercise">
-                            <div class="exercise-info">
-                                <span class="exercise-icon">C</span>
-
-                                <div>
-                                    <h4>Core / Abdominales</h4>
-                                    <p>Accesorio</p>
-                                </div>
-                            </div>
-
-                            <div class="exercise-data">
-                                <strong>3 × 15</strong>
-                                <span>RPE 7</span>
-                            </div>
-
-                            <button class="complete-btn">
-                                ✓
-                            </button>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- CALCULADORA -->
-        <section class="calculator-section" id="calculadora">
-
-            <div class="calculator-info">
-                <p>CALCULADORA DE FUERZA</p>
-
-                <h2>
-                    CALCULA TU
-                    <span>1RM</span>
-                </h2>
-
-                <p>
-                    Introduce el peso utilizado y las repeticiones realizadas
-                    para estimar tu repetición máxima.
-                </p>
-
-                <div class="formula">
-                    <strong>FÓRMULA DE EPLEY</strong>
-                    <span>1RM = Peso × (1 + Reps / 30)</span>
-                </div>
-            </div>
-
-
-            <div class="calculator">
-
-                <label for="weight">
-                    PESO UTILIZADO (KG)
-                </label>
-
-                <input
-                    type="number"
-                    id="weight"
-                    placeholder="Ej. 120"
-                    min="1"
-                >
-
-                <label for="reps">
-                    REPETICIONES
-                </label>
-
-                <input
-                    type="number"
-                    id="reps"
-                    placeholder="Ej. 5"
-                    min="1"
-                    max="30"
-                >
-
-                <button class="btn primary full" id="calculateBtn">
-                    CALCULAR 1RM
-                </button>
-
-                <div class="result">
-                    <p>1RM ESTIMADO</p>
-                    <strong id="oneRM">-- KG</strong>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- PROGRESO -->
-        <section class="progress-section" id="progreso">
-
-            <div class="section-title">
-                <p>TRACKING</p>
-                <h2>MONITOREA TU <span>PROGRESO</span></h2>
-            </div>
-
-            <div class="progress-grid">
-
-                <div class="progress-card">
-                    <div class="progress-card-header">
-                        <div>
-                            <p>SENTADILLA</p>
-                            <h3 id="squatWeight">180 KG</h3>
-                        </div>
-
-                        <span class="positive">+12%</span>
-                    </div>
-
-                    <div class="chart">
-                        <div style="height: 30%"></div>
-                        <div style="height: 42%"></div>
-                        <div style="height: 48%"></div>
-                        <div style="height: 60%"></div>
-                        <div style="height: 65%"></div>
-                        <div style="height: 78%"></div>
-                        <div style="height: 90%"></div>
-                    </div>
-
-                    <p class="chart-label">
-                        ÚLTIMAS 7 SEMANAS
-                    </p>
-                </div>
-
-
-                <div class="progress-card">
-                    <div class="progress-card-header">
-                        <div>
-                            <p>PRESS BANCA</p>
-                            <h3>125 KG</h3>
-                        </div>
-
-                        <span class="positive">+8%</span>
-                    </div>
-
-                    <div class="chart red">
-                        <div style="height: 35%"></div>
-                        <div style="height: 40%"></div>
-                        <div style="height: 46%"></div>
-                        <div style="height: 55%"></div>
-                        <div style="height: 58%"></div>
-                        <div style="height: 72%"></div>
-                        <div style="height: 82%"></div>
-                    </div>
-
-                    <p class="chart-label">
-                        ÚLTIMAS 7 SEMANAS
-                    </p>
-                </div>
-
-
-                <div class="progress-card">
-                    <div class="progress-card-header">
-                        <div>
-                            <p>PESO MUERTO</p>
-                            <h3>220 KG</h3>
-                        </div>
-
-                        <span class="positive">+15%</span>
-                    </div>
-
-                    <div class="chart yellow">
-                        <div style="height: 25%"></div>
-                        <div style="height: 38%"></div>
-                        <div style="height: 44%"></div>
-                        <div style="height: 55%"></div>
-                        <div style="height: 62%"></div>
-                        <div style="height: 75%"></div>
-                        <div style="height: 95%"></div>
-                    </div>
-
-                    <p class="chart-label">
-                        ÚLTIMAS 7 SEMANAS
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- CTA -->
-        <section class="cta">
-
-            <p>NO HAY EXCUSAS</p>
-
-            <h2>
-                MÁS FUERTE QUE
-                <span>AYER.</span>
-            </h2>
-
-            <button class="btn primary" id="startBtn">
-                INICIAR SESIÓN
-            </button>
-
-        </section>
-
+      <section class="hero" id="inicio">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><i></i> POWERLIFTING · FUERZA · RENDIMIENTO</p>
+          <h1>La fuerza no se improvisa.<br /><em>Se construye.</em></h1>
+          <p class="hero-text">Entrena con <strong>Néstor Riveros</strong>, Campeón Nacional WRPF, y lleva tu rendimiento al nivel que exige tu potencial.</p>
+          <div class="hero-actions"><a class="button primary" href="#contacto">Comienza hoy <span>→</span></a><a class="button ghost" href="#resultados">Ver resultados <span>↓</span></a></div>
+        </div>
+        <div class="hero-visual reveal delay-1">
+          <div class="grid-lines"></div><div class="hero-image" role="img" aria-label="Atleta levantando una barra en competencia"></div>
+          <div class="champion-card"><span class="medal">✦</span><div><small>COMPETENCIA</small><strong>Campeón Nacional<br />WRPF</strong></div></div>
+          <p class="image-note">IMAGEN DE NÉSTOR<br /><span>Reemplazar con fotografía de competencia</span></p>
+        </div>
+        <div class="scroll-label">DESPLAZA PARA EXPLORAR <span></span></div>
+      </section>
+
+      <section class="proof-bar" aria-label="Credenciales"><div><b>01</b> Campeón Nacional WRPF</div><div><b>02</b> Programación individual</div><div><b>03</b> Entrenamiento + nutrición</div><div><b>04</b> Basado en evidencia</div></section>
+
+      <section class="intro section" id="metodo">
+        <div class="section-label">01 / EL ENFOQUE</div>
+        <div class="intro-main"><h2>No necesitas más motivación.<br />Necesitas <em>dirección.</em></h2><p>Un plan que entiende tu contexto, mide lo que importa y te acerca semana tras semana a una versión más fuerte de ti. Aquí no hay plantillas genéricas: hay estrategia, técnica y seguimiento real.</p><a class="text-link" href="#contacto">Hablemos de tus objetivos <span>→</span></a></div>
+        <div class="benefits"><article><span>01</span><h3>Entrena con intención</h3><p>Cada sesión tiene un propósito claro dentro de una progresión diseñada para ti.</p></article><article><span>02</span><h3>Domina la técnica</h3><p>Convierte cada repetición en una herramienta para levantar más y moverte mejor.</p></article><article><span>03</span><h3>Sostén el progreso</h3><p>Entrenamiento, alimentación y hábitos alineados para resultados que perduran.</p></article></div>
+      </section>
+
+      <section class="results section" id="resultados"><div class="results-head"><div class="section-label">02 / RESULTADOS</div><h2>El trabajo habla<br /><em>por sí solo.</em></h2><p>Espacio preparado para historias reales de atletas y personas que decidieron tomarse su progreso en serio.</p></div><div class="result-grid"><article class="result-card wide"><div class="result-photo photo-1"></div><div class="result-content"><span>CASO DE ÉXITO / 01</span><h3>Más fuerza. Más confianza.</h3><p>Reemplaza con una transformación, una mejora de marcas o un testimonio de cliente.</p><b>+00 kg <small>en total</small></b></div></article><article class="result-card"><div class="result-photo photo-2"></div><div class="result-content"><span>ATLETA / 02</span><h3>Competir preparado.</h3><b>00 kg <small>PR sentadilla</small></b></div></article><article class="quote-card"><span>“</span><p>El proceso de Néstor convierte objetivos ambiciosos en acciones claras.</p><small>TESTIMONIO — NOMBRE DEL CLIENTE</small></article></div></section>
+
+      <section class="services section" id="servicios"><div class="section-label">03 / ASESORÍAS</div><div class="services-head"><h2>Tu objetivo<br />merece un <em>plan.</em></h2><p>Elige el acompañamiento que necesitas hoy. Todo comienza entendiendo dónde estás y hacia dónde quieres llegar.</p></div><div class="service-list"><article><div class="service-number">01</div><div><h3>Powerlifting</h3><p>Programación por bloques, técnica y preparación para competir con seguridad.</p></div><a href="#contacto" aria-label="Consultar asesoría de Powerlifting">↗</a></article><article><div class="service-number">02</div><div><h3>Entrenamiento online</h3><p>Planificación individual, seguimiento continuo y ajustes que responden a tu progreso.</p></div><a href="#contacto" aria-label="Consultar entrenamiento online">↗</a></article><article><div class="service-number">03</div><div><h3>Entrenamiento presencial</h3><p>Corrección técnica y acompañamiento directo para entrenar con máxima precisión.</p></div><a href="#contacto" aria-label="Consultar entrenamiento presencial">↗</a></article><article><div class="service-number">04</div><div><h3>Nutrición para rendimiento</h3><p>Estrategias de alimentación realistas que respaldan tus metas dentro y fuera del gimnasio.</p></div><a href="#contacto" aria-label="Consultar nutrición">↗</a></article></div></section>
+
+      <section class="timeline section"><div class="section-label">04 / METODOLOGÍA</div><h2>Del punto A al<br /><em>rendimiento real.</em></h2><div class="steps"><article><span>01</span><h3>Diagnóstico</h3><p>Entendemos tus metas, experiencia, disponibilidad y punto de partida.</p></article><article><span>02</span><h3>Evaluación</h3><p>Analizamos técnica, capacidades y los datos que guiarán el plan.</p></article><article><span>03</span><h3>Plan</h3><p>Construimos una estrategia personalizada, clara y sostenible.</p></article><article><span>04</span><h3>Seguimiento</h3><p>Ajustamos el proceso para que cada bloque te acerque al resultado.</p></article></div></section>
+
+      <section class="about section" id="nestor"><div class="about-photo"><div class="portrait" role="img" aria-label="Retrato profesional de Néstor Riveros"></div><p>FOTOGRAFÍA PROFESIONAL<br /><span>Reemplazar por retrato de Néstor</span></p></div><div class="about-copy"><div class="section-label">05 / SOBRE NÉSTOR</div><h2>Experiencia que<br /><em>se transfiere.</em></h2><p>No se trata de perseguir una estética pasajera ni de entrenar sin rumbo. Como atleta competitivo y Campeón Nacional WRPF, Néstor traduce la disciplina del alto rendimiento en un proceso que puedes sostener y disfrutar.</p><p>Su enfoque une ciencia, práctica y una convicción: todos pueden descubrir una versión más capaz de sí mismos.</p><div class="signature">Néstor Riveros <span>— Coach &amp; atleta</span></div></div></section>
+
+      <section class="faq section"><div><div class="section-label">06 / PREGUNTAS</div><h2>Todo empieza<br />con una <em>conversación.</em></h2></div><div class="accordion"><details><summary>¿Necesito experiencia para empezar?<span>+</span></summary><p>No. El plan se adapta a tu experiencia, objetivos y contexto actual. Empezamos desde donde estés.</p></details><details><summary>¿La asesoría es solo para powerlifters?<span>+</span></summary><p>El powerlifting es la especialidad, pero el método también sirve a quienes buscan fuerza, masa muscular, salud y mejores hábitos.</p></details><details><summary>¿Cómo funciona el seguimiento online?<span>+</span></summary><p>Recibirás una programación personalizada y revisiones periódicas para ajustar cargas, técnica y estrategia.</p></details><details><summary>¿Incluye orientación nutricional?<span>+</span></summary><p>La estrategia nutricional se integra de acuerdo con el servicio contratado y tus objetivos de rendimiento.</p></details></div></section>
+
+      <section class="final-cta" id="contacto"><p class="eyebrow"><i></i> TU PRÓXIMO NIVEL EMPIEZA HOY</p><h2>Haz que tu esfuerzo<br /><em>cuente.</em></h2><p>Cuéntame cuál es tu meta. Diseñaremos el camino para perseguirla con intención.</p><a class="button primary" href="https://wa.me/570000000000?text=Hola%20N%C3%A9stor%2C%20quiero%20conocer%20las%20asesor%C3%ADas." target="_blank" rel="noopener">Hablar por WhatsApp <span>↗</span></a><small>Reemplaza el número de WhatsApp antes de publicar.</small></section>
     </main>
-
-
-    <!-- FOOTER -->
-    <footer>
-
-        <div class="logo">
-            <span>IRON</span> FORCE
-        </div>
-
-        <p>
-            Entrena duro. Entrena inteligente.
-        </p>
-
-        <p class="copyright">
-            © 2026 IRON FORCE
-        </p>
-
-    </footer>
-
-
-    <!-- MODAL -->
-    <div class="modal" id="modal">
-
-        <div class="modal-content">
-
-            <button class="close-modal" id="closeModal">
-                ×
-            </button>
-
-            <p>ENTRENAMIENTO</p>
-
-            <h2 id="modalTitle">
-                SENTADILLA
-            </h2>
-
-            <div id="modalBody">
-                <p>
-                    Preparación específica para mejorar tu fuerza.
-                </p>
-
-                <ul>
-                    <li>Calentamiento: 10 minutos</li>
-                    <li>Series principales: 5 × 5</li>
-                    <li>RPE objetivo: 7-8</li>
-                    <li>Descanso: 3-5 minutos</li>
-                </ul>
-            </div>
-
-        </div>
-
-    </div>
-
-
+    <a class="whatsapp-float" href="https://wa.me/573144514661?text=Hola%20N%C3%A9stor%2C%20quiero%20conocer%20las%20asesor%C3%ADas." target="_blank" rel="noopener" aria-label="Hablar con Néstor por WhatsApp" title="Hablar por WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a12.8 12.8 0 0 0-11 19.4L3.4 29l6.8-1.8A12.9 12.9 0 1 0 16 3Zm0 23.5a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-4 1 1-3.9-.3-.4A10.6 10.6 0 1 1 16 26.5Zm5.8-7.9c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.3.2-.6.1a8.6 8.6 0 0 1-2.5-1.5 9.5 9.5 0 0 1-1.8-2.3c-.2-.3 0-.4.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.5l-1.1-2.6c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.2s1.4 3.6 1.6 3.9c.2.2 2.7 4.2 6.7 5.8.9.4 1.7.6 2.2.7.9.3 1.8.2 2.5.1.8-.1 1.9-.8 2.2-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.2-.6-.4Z" fill="currentColor"/></svg><span>WhatsApp</span></a>
+    <footer><a class="brand" href="#inicio">NR<span>.</span></a><p>FUERZA CON PROPÓSITO — © <span id="year"></span></p><div><a href="#">Instagram</a><a href="#">Email</a><a href="#">Aviso legal</a></div></footer>
     <script src="script.js"></script>
-
-</body>
+  </body>
 </html>
